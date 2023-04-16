@@ -1,0 +1,180 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-heading: "Epilogue", sans-serif;
+    --ff-textinh: "open sans", sans-serif;
+
+    --hue: 250;
+    --bg-primary: hsl(var(--hue), 22%, 20%);
+    --fc-primary: hsl(var(--hue), 0%, 100%);
+    --fc-secondary: hsl(var(--hue), 50%, 80%);
+    --fc-secondary-dark: hsl(var(--hue), 100%, 11%, 1);
+
+    font-size: 62.5%;
+    --fs-body: 1.6rem;
+    --fs-heading:4rem
+}
+main { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: grid;
+    align-items: center;
+    gap: 3.2rem;
+    
+}
+
+
+
+
+.page{
+    max-width: 33rem;
+    margin: 0 auto;
+    
+}
+body { 
+   
+    font-family: var(--ff-textinh);
+    background-color: var(--bg-primary);
+    color: var(--fc-primary);
+    font-size: var(--fs-body);
+   
+}
+.page {
+    max-width: 33rem;
+    margin: 0 auto ;
+}
+
+header { 
+    font-family: var(--ff-heading);
+    text-align: center;
+    margin: 10rem 0 8rem;
+
+   
+}
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 6.0px;
+    align-items: center;
+}
+
+header p {
+    color: var(--fc-secondary);
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+    line-height: 3.2rem;
+    margin-bottom: 1.7rem;
+    font-weight: 400;
+
+}
+header h1 {
+    font-size: var(--fs-heading);
+    line-height: 4.8rem;
+    font-weight: 800;
+}
+.card {
+    position: relative;
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading);
+   
+}
+.card img {
+    height: 41.6rem;
+    object-fit: cover;
+    transition: all 200ms;
+
+}
+
+.card img:hover{
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+.card h2 {
+    position: absolute;
+    bottom: 5.2rem;
+    left: 2.8rem;
+    font-size: 4rem;
+    font-weight: 800;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+}
+
+.card img{
+    width: 50rem;
+}
+
+.card h2 span {
+    border-radius: 2rem;
+    background-color: var(--fc-primary);
+    font-size: var(--fs-body);
+    color: var(--fc-secondary-dark);
+    font-weight: 400;
+    padding: 0 1.6rem;
+    height: 3.8rem;
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+
+}
+
+header{
+    animation: topdown 700ms;
+    /* animation-name: topdown;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards; termina do jeito que comecou */
+    /* animation-direction: reverse;   */
+    /* animation-delay: 200ms;
+    animation-timing-function: ease; curva baseair */
+    /* animation-iteration-count: infinite; */
+    /* animation-play-state: paused; */
+}
+
+/* header:hover { 
+    animation-play-state: running;
+    PARA A ANIMACAO COMECAR PAUSADO E COMECAR QUNADO O MOUSE ATIVAR
+} */
+
+main { 
+    animation: downtop 700ms 350ms backwards;
+
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15);
+    }
+    
+
+
+    100% {
+        opacity: 1;
+        transform: trnaslateY(0);
+    }
+}
+
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15);
+    }
+    
+
+
+    100% {
+        opacity: 1;
+        transform: trnaslateY(0);
+    }
+}
+
